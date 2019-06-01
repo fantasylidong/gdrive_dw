@@ -1,5 +1,6 @@
-cd /root
-./gd sync upload /root/google/ 你的文件id
-rm -rf /root/google/*
-
-
+#!/bin/sh
+src=$1
+src=$src
+dst=me:@gdurl/$2
+echo  {$src} >/home/morzlee/test.log
+rclone -v copy --ignore-existing "$src" "$dst" --log-file=/home/morzlee/rclone.log
